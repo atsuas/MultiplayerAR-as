@@ -58,3 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+*.meta
+*.asset
+*.ttf
+*.mat
+*.FBX
+*.png
+*.prefab
