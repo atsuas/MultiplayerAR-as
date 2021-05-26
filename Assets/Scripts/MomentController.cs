@@ -5,12 +5,14 @@ using UnityEngine;
 public class MomentController : MonoBehaviour
 {
     public Joystick joystick;
-    public float speed = 4;
+    public float speed = 2f;
     private Vector3 velocityVector = Vector3.zero; //初速度
 
     public float maxVelocityChange = 4f;
     private Rigidbody rb;
-    
+
+    public float tiltAmount = 10f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,6 +33,8 @@ public class MomentController : MonoBehaviour
 
         //Movementの適用
         Move(_movementVelocityVector);
+
+        transform.rotation = Quaternion.Euler(joystick.Vertical * speed * tiltAmount, 0, -1 * joystick.Horizontal * speed * tiltAmount);
     }
 
     void Move(Vector3 movementVelocicityVector)
