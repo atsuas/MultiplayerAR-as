@@ -65,3 +65,4 @@ crashlytics-build.properties
 *.FBX
 *.png
 *.prefab
+*.dll
