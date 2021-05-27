@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &213413510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,7 +703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &678248422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2761,7 +2761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1867033496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3007,6 +3007,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameInputField: {fileID: 897141428}
+  uI_LoginGameobject: {fileID: 1867033495}
+  uI_LobbyGameobject: {fileID: 678248421}
+  uI_3DGameobject: {fileID: 213413509}
+  uI_ConnectionStatusGameobject: {fileID: 644936267}
+  connectionStatusText: {fileID: 1209188605}
+  showConnectionStatus: 0
 --- !u!4 &1943482107
 Transform:
   m_ObjectHideFlags: 0
