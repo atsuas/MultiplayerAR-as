@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
@@ -70,6 +71,12 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             Debug.Log("Player name is invalid or enpty!");
         }
     }
+
+    public void OnQuickMatchButtonClicked()
+    {
+        SceneManager.LoadScene("Scene_Loading");
+    }
+
     #endregion
 
 
