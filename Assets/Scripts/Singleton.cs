@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Inherit from this base class to create a singleton.
+/// このベースクラスを継承してシングルトンを作成する
 /// e.g. public class MyClassName : Singleton<MyClassName> {}
 /// </summary>
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    // Check to see if we're about to be destroyed.
+    // 破壊されそうになっているかどうかをチェックする
     private static bool m_ShuttingDown = false;
     private static object m_Lock = new object();
     private static T m_Instance;
 
     /// <summary>
-    /// Access singleton instance through this propriety.
+    /// このプロパティを使ってシングルトンのインスタンスにアクセスする
     /// </summary>
     public static T Instance
     {
@@ -29,18 +29,18 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             {
                 if (m_Instance == null)
                 {
-                    // Search for existing instance.
+                    // 既存のインスタンスを検索する
                     m_Instance = (T)FindObjectOfType(typeof(T));
 
-                    // Create new instance if one doesn't already exist.
+                    // まだ存在していない場合は、新しいインスタンスを作成する
                     if (m_Instance == null)
                     {
-                        // Need to create a new GameObject to attach the singleton to.
+                        // シングルトンをアタッチするためには、新しいGameObjectを作成する必要がある
                         var singletonObject = new GameObject();
                         m_Instance = singletonObject.AddComponent<T>();
                         singletonObject.name = typeof(T).ToString() + " (Singleton)";
 
-                        // Make instance persistent.
+                        // インスタンスの持続性を高める
                         DontDestroyOnLoad(singletonObject);
                     }
                 }
