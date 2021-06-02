@@ -66,3 +66,9 @@ crashlytics-build.properties
 *.png
 *.prefab
 *.dll
+*.plist
+*.aspx
+*.assets
+*.dylib
+*.resS
+*.map

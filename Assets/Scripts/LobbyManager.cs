@@ -24,7 +24,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     #region Unity Methods
     void Start()
     {
-        //Activeting only Lobby UI
+        //Lobby UIだけを起動する
         if (PhotonNetwork.IsConnected)
         {
             uI_LobbyGameobject.SetActive(true);
@@ -35,7 +35,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            //Activating only Login UI since we did noy connect to photon yet.
+            //まだPhotonに接続していないので、Login UIのみ起動している
             uI_LobbyGameobject.SetActive(false);
             uI_3DGameobject.SetActive(false);
             uI_ConnectionStatusGameobject.SetActive(false);

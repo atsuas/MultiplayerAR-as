@@ -55,12 +55,12 @@ public class PlayerSelectionManager : MonoBehaviour
 
         if (playerSelectionNumber == 0 || playerSelectionNumber == 1)
         {
-            //This means the player model type in Attack
+            //これは、Attackのプレイヤーモデルタイプを意味してる
             playerModelType_Text.text = "Attack";
         }
         else
         {
-            //This means the player model type in Defend
+            //これは、Defendのプレイヤーモデルタイプを意味してる
             playerModelType_Text.text = "Defend";
         }
     }
@@ -81,12 +81,12 @@ public class PlayerSelectionManager : MonoBehaviour
 
         if (playerSelectionNumber == 0 || playerSelectionNumber == 1)
         {
-            //This means the player model type in Attack
+            //これは、Attackのプレイヤーモデルタイプを意味してる
             playerModelType_Text.text = "Attack";
         }
         else
         {
-            //This means the player model type in Defend
+            //これは、Defendのプレイヤーモデルタイプを意味してる
             playerModelType_Text.text = "Defend";
         }
     }
