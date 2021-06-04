@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
 
 public class PlayerSetup : MonoBehaviourPun
 {
+    public TextMeshProUGUI playerNameText;
     
     void Start()
     {
@@ -20,10 +22,22 @@ public class PlayerSetup : MonoBehaviourPun
             transform.GetComponent<MomentController>().enabled = false;
             transform.GetComponent<MomentController>().joystick.gameObject.SetActive(false);
         }
+        SetPlayerName();
     }
 
-    void Update()
+    void SetPlayerName()
     {
-        
+        if (playerNameText != null)
+        {
+            if (photonView.IsMine)
+            {
+                playerNameText.text = "YOU";
+                playerNameText.color = Color.red;
+            }
+            else
+            {
+                playerNameText.text = photonView.Owner.NickName;
+            }
+        }
     }
 }
