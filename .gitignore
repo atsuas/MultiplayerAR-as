@@ -72,3 +72,11 @@ crashlytics-build.properties
 *.dylib
 *.resS
 *.map
+*.sh
+*.h
+*.mm
+*.cpp
+*.c
+*.storyboard
+*.a
+*.m
