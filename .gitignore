@@ -77,3 +77,6 @@ crashlytics-build.properties
 *.mm
 *.cpp
 *.c
+*.storyboard
+*.a
+*.m
