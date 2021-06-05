@@ -11,6 +11,14 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
     Vector3 networkedPosition;
     Quaternion networkedRotation;
 
+    public bool synchronizeVelocity = true;
+    public bool synchronizeAngularVelocity = true;
+    public bool isTeleportEnabled = true;
+    public float teleportIfDistanceGreaterThen = 1.0f;
+
+    private float distance;
+    private float angle;
+
 
     private void Awake()
     {
@@ -35,8 +43,8 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
     {
         if (!photonView.IsMine)
         {
-            rb.position = Vector3.MoveTowards(rb.position, networkedPosition, Time.fixedDeltaTime);
-            rb.rotation = Quaternion.RotateTowards(rb.rotation, networkedRotation, Time.fixedDeltaTime * 100);
+            rb.position = Vector3.MoveTowards(rb.position, networkedPosition, distance * (1.0f / PhotonNetwork.SerializationRate));
+            rb.rotation = Quaternion.RotateTowards(rb.rotation, networkedRotation, angle * (1.0f / PhotonNetwork.SerializationRate));
         }
     }
 
@@ -48,6 +56,16 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
             //should send position, velocity etc. data to the other players
             stream.SendNext(rb.position);
             stream.SendNext(rb.rotation);
+
+            if (synchronizeVelocity)
+            {
+                stream.SendNext(rb.velocity);
+            }
+
+            if (synchronizeAngularVelocity)
+            {
+                stream.SendNext(rb.angularVelocity);
+            }
         }
         else
         {
@@ -55,6 +73,36 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
             networkedPosition = (Vector3)stream.ReceiveNext();
             networkedRotation = (Quaternion)stream.ReceiveNext();
 
+            if (isTeleportEnabled)
+            {
+                if (Vector3.Distance(rb.position, networkedPosition) > teleportIfDistanceGreaterThen)
+                {
+                    rb.position = networkedPosition;
+                }
+            }
+
+            if (synchronizeVelocity || synchronizeAngularVelocity)
+            {
+                float lag = Mathf.Abs((float)(PhotonNetwork.Time - info.SentServerTime));
+
+                if (synchronizeVelocity)
+                {
+                    rb.velocity = (Vector3)stream.ReceiveNext();
+
+                    networkedPosition += rb.velocity * lag;
+
+                    distance = Vector3.Distance(rb.position, networkedPosition);
+                }
+
+                if (synchronizeAngularVelocity)
+                {
+                    rb.angularVelocity = (Vector3)stream.ReceiveNext();
+
+                    networkedRotation = Quaternion.Euler(rb.angularVelocity * lag) * networkedRotation;
+
+                    angle = Quaternion.Angle(rb.rotation, networkedRotation);
+                }
+            }
         }
     }
 }
