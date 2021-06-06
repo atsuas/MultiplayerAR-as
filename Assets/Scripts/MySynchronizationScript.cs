@@ -52,8 +52,8 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
     {
         if (stream.IsWriting)
         {
-            //Then, photonView is mine and I am the one who controls this player.
-            //should send position, velocity etc. data to the other players
+            //photonViewをログインしたプレイヤーのものにできる
+            //位置、速度などのデータを他のプレーヤーに送信する
             stream.SendNext(rb.position);
             stream.SendNext(rb.rotation);
 
@@ -69,7 +69,7 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
         }
         else
         {
-            //Called on my player gameobject that exists in remote player's game
+            //リモートプレイヤーのゲームに存在する自分のプレイヤーのゲームオブジェクトに呼び出される
             networkedPosition = (Vector3)stream.ReceiveNext();
             networkedRotation = (Quaternion)stream.ReceiveNext();
 
