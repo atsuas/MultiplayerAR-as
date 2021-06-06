@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using TMPro;
 
 public class BattleScript : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class BattleScript : MonoBehaviour
     private float startSpinSpeed;
     private float currentSpinSpeed;
     public Image spinSpeedBar_Image;
+    public TextMeshProUGUI spinSpeedRatio_Text;
 
     private void Awake()
     {
@@ -24,7 +27,7 @@ public class BattleScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Comparing the speeds of the SpinnerTops
+            //スピナートップのスピード比較
             float mySpeed = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
             float otherPlayerSpeed = collision.collider.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
 
@@ -33,12 +36,25 @@ public class BattleScript : MonoBehaviour
             if (mySpeed > otherPlayerSpeed)
             {
                 Debug.Log(" YOU DAMAGE the other player. ");
-            }
-            else
-            {
-                Debug.Log("YOU get DAMAGE!");
+
+                if (collision.collider.gameObject.GetComponent<PhotonView>().IsMine)
+                {
+                    //スピードの遅いプレーヤーにダメージを与える
+                    collision.collider.gameObject.GetComponent<PhotonView>().RPC("DoDamage", RpcTarget.AllBuffered, 400f);
+                }
             }
         }
+    }
+
+    [PunRPC]
+    public void DoDamage(float _damegeAmount)
+    {
+        spinnerScript.spinSpeed -= _damegeAmount;
+        currentSpinSpeed = spinnerScript.spinSpeed;
+
+        spinSpeedBar_Image.fillAmount = currentSpinSpeed / startSpinSpeed;
+        spinSpeedRatio_Text.text = currentSpinSpeed + "/" + startSpinSpeed;
+
     }
 
     void Start()
