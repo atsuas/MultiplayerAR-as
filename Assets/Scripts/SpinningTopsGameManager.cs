@@ -27,6 +27,18 @@ public class SpinningTopsGameManager : MonoBehaviourPunCallbacks
 
         searchForGamesBottonGameobject.SetActive(false);
     }
+
+    public void OnQuitMatchButtonClicked()
+    {
+        if (PhotonNetwork.InRoom)
+        {
+            PhotonNetwork.LeaveRoom();
+        }
+        else
+        {
+            Scene_Loader.Instance.LoadScene("Scene_Lobby");
+        }
+    }
     #endregion
 
 
@@ -61,6 +73,11 @@ public class SpinningTopsGameManager : MonoBehaviourPunCallbacks
         uI_InformText.text = newPlayer.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name + " Player count " + PhotonNetwork.CurrentRoom.PlayerCount;
 
         StartCoroutine(DeactivateAfterSeconds(uI_InformmPanelGameobject, 2.0f));
+    }
+
+    public override void OnLeftRoom()
+    {
+        Scene_Loader.Instance.LoadScene("Scene_Lobby");
     }
     #endregion
 
