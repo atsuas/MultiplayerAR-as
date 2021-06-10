@@ -15,7 +15,7 @@ public class SpinningTopsGameManager : MonoBehaviourPunCallbacks
     void Start()
     {
         uI_InformmPanelGameobject.SetActive(true);
-        uI_InformText.text = "Serch For Games to BATTLE!";
+        //uI_InformText.text = "Serch For Games to BATTLE!";
     }
 
     #region UI Callback Method

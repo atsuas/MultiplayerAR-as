@@ -1526,7 +1526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &905712418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 987175248}
         m_MethodName: EnableARPlacementAndPlaneDetection
         m_Mode: 1
         m_Arguments:
@@ -1848,6 +1848,7 @@ GameObject:
   - component: {fileID: 987175243}
   - component: {fileID: 987175247}
   - component: {fileID: 987175246}
+  - component: {fileID: 987175248}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -1924,6 +1925,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aRCamera: {fileID: 1674688395}
   battleArenaGameobject: {fileID: 760013867502548235}
+--- !u!114 &987175248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987175242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb9c6a2426674e979faf4d656c81c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeButton: {fileID: 1543558401}
+  adjustButton: {fileID: 905712417}
+  searchForGameButton: {fileID: 623289035}
+  informUIPanel_Text: {fileID: 243443568}
 --- !u!1 &1070027340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,7 +2311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1543558402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2359,8 +2376,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: DisableARPlacementAndPlaneDetection
+      - m_Target: {fileID: 987175248}
+        m_MethodName: DisableARPlacementAndPlaceDetection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

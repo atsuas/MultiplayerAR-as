@@ -63,6 +63,7 @@
 		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ARPlacementAndPlaneDetectionController" preserve="nothing"/>
 		<type fullname="ARPlacementManager" preserve="nothing"/>
 		<type fullname="BattleScript" preserve="nothing"/>
 		<type fullname="FixedJoystick" preserve="nothing"/>
