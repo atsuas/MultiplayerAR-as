@@ -12,6 +12,8 @@ public class ARPlacementAndPlaneDetectionController : MonoBehaviour
     public GameObject placeButton;
     public GameObject adjustButton;
     public GameObject searchForGameButton;
+    public GameObject scaleSlider;
+
     public TextMeshProUGUI informUIPanel_Text;
 
     private void Awake()
@@ -23,6 +25,8 @@ public class ARPlacementAndPlaneDetectionController : MonoBehaviour
     void Start()
     {
         placeButton.SetActive(true);
+        scaleSlider.SetActive(true);
+
         adjustButton.SetActive(false);
         searchForGameButton.SetActive(false);
 
@@ -39,6 +43,7 @@ public class ARPlacementAndPlaneDetectionController : MonoBehaviour
         m_ARPlaneManager.enabled = false;
         m_ARPlacementManager.enabled = false;
         SetAllPlanesActiveOrDeactive(false);
+        scaleSlider.SetActive(false);
 
         placeButton.SetActive(false);
         adjustButton.SetActive(true);
@@ -52,6 +57,7 @@ public class ARPlacementAndPlaneDetectionController : MonoBehaviour
         m_ARPlaneManager.enabled = true;
         m_ARPlacementManager.enabled = true;
         SetAllPlanesActiveOrDeactive(true);
+        scaleSlider.SetActive(true);
 
         placeButton.SetActive(true);
         adjustButton.SetActive(false);

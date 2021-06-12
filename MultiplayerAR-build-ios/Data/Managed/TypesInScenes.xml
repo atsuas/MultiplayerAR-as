@@ -72,6 +72,7 @@
 		<type fullname="MySynchronizationScript" preserve="nothing"/>
 		<type fullname="PlayerSelectionManager" preserve="nothing"/>
 		<type fullname="PlayerSetup" preserve="nothing"/>
+		<type fullname="ScaleController" preserve="nothing"/>
 		<type fullname="SpawnManager" preserve="nothing"/>
 		<type fullname="Spinner" preserve="nothing"/>
 		<type fullname="SpinningTopsGameManager" preserve="nothing"/>

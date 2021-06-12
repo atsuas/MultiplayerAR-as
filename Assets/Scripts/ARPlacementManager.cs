@@ -30,7 +30,7 @@ public class ARPlacementManager : MonoBehaviour
 
         if (m_ARRaycastManager.Raycast(ray, raycast_Hits, TrackableType.PlaneWithinPolygon))
         {
-            //intersection
+            //交差点
             Pose hitPose = raycast_Hits[0].pose;
 
             Vector3 positionToBePlaced = hitPose.position;
