@@ -19,6 +19,7 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
     private float distance;
     private float angle;
 
+    private GameObject battleArenaGameobject;
 
     private void Awake()
     {
@@ -27,6 +28,8 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
 
         networkedPosition = new Vector3();
         networkedRotation = new Quaternion();
+
+        battleArenaGameobject = GameObject.Find("BattleArena");
     }
 
     void Start()
@@ -54,7 +57,7 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
         {
             //photonViewをログインしたプレイヤーのものにできる
             //位置、速度などのデータを他のプレーヤーに送信する
-            stream.SendNext(rb.position);
+            stream.SendNext(rb.position - battleArenaGameobject.transform.position);
             stream.SendNext(rb.rotation);
 
             if (synchronizeVelocity)
@@ -70,7 +73,7 @@ public class MySynchronizationScript : MonoBehaviour, IPunObservable
         else
         {
             //リモートプレイヤーのゲームに存在する自分のプレイヤーのゲームオブジェクトに呼び出される
-            networkedPosition = (Vector3)stream.ReceiveNext();
+            networkedPosition = (Vector3)stream.ReceiveNext() + battleArenaGameobject.transform.position;
             networkedRotation = (Quaternion)stream.ReceiveNext();
 
             if (isTeleportEnabled)
