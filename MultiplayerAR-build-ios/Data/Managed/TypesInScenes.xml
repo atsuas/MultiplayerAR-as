@@ -44,8 +44,10 @@
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
 		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.PhysicMaterial" preserve="nothing"/>
@@ -59,15 +61,20 @@
 		<type fullname="UnityEngine.SpriteRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshFilter" preserve="nothing"/>
 		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.LineRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ARPlacementAndPlaneDetectionController" preserve="nothing"/>
+		<type fullname="ARPlacementManager" preserve="nothing"/>
+		<type fullname="BattleScript" preserve="nothing"/>
 		<type fullname="FixedJoystick" preserve="nothing"/>
 		<type fullname="LobbyManager" preserve="nothing"/>
 		<type fullname="MomentController" preserve="nothing"/>
 		<type fullname="MySynchronizationScript" preserve="nothing"/>
 		<type fullname="PlayerSelectionManager" preserve="nothing"/>
 		<type fullname="PlayerSetup" preserve="nothing"/>
+		<type fullname="ScaleController" preserve="nothing"/>
 		<type fullname="SpawnManager" preserve="nothing"/>
 		<type fullname="Spinner" preserve="nothing"/>
 		<type fullname="SpinningTopsGameManager" preserve="nothing"/>
@@ -96,6 +103,18 @@
 		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
 		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
 		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.XR.ARFoundation">
+		<type fullname="UnityEngine.XR.ARFoundation.ARCameraBackground" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARCameraManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARInputManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlane" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlaneManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPoseDriver" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARRaycastManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARSession" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARSessionOrigin" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
