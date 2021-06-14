@@ -80,3 +80,7 @@ crashlytics-build.properties
 *.storyboard
 *.a
 *.m
+*.flare
+*.unity
+*.txt
+*.tga
