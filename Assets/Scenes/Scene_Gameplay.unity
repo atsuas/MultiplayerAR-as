@@ -2635,10 +2635,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefabs:
-  - {fileID: 2523371896380985836, guid: 13c092cb75032fe4997cd193efa999d4, type: 3}
-  - {fileID: 1802076417471478439, guid: 35665747fae2c984da63fdefa6af5705, type: 3}
-  - {fileID: 2269595059983960058, guid: 70b38378b7c9bea41a50a87f132e7b13, type: 3}
-  - {fileID: 4663518797756989780, guid: 0075b5b227e2c5d4da8babe893492b5c, type: 3}
+  - {fileID: 9192842810537230640, guid: 879ced924375448d094443b657963a86, type: 3}
+  - {fileID: 7387287235266658361, guid: d57293ce4f8704b7e93a9790f087da35, type: 3}
+  - {fileID: 1163003967889285368, guid: 8910d887f24f649cdb202103c2f3a8fa, type: 3}
+  - {fileID: 8219104573536301836, guid: 49e6aa0b195d34f7bb219086eb2b5f67, type: 3}
   spawnPositions:
   - {fileID: 950113033}
   - {fileID: 931434789}

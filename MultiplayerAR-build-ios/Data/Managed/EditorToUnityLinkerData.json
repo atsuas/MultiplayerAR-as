@@ -235,7 +235,9 @@
             "fullManagedTypeName": "UnityEngine.AnimationClip",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity"
+                "Assets/Scenes/Scene_Lobby.unity",
+                "Assets/Scenes/Scene_PlayerSelection.unity",
+                "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
         {
@@ -255,7 +257,9 @@
             "fullManagedTypeName": "UnityEngine.SkinnedMeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity"
+                "Assets/Scenes/Scene_Lobby.unity",
+                "Assets/Scenes/Scene_PlayerSelection.unity",
+                "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
         {
@@ -350,7 +354,9 @@
             "fullManagedTypeName": "UnityEngine.Animator",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity"
+                "Assets/Scenes/Scene_Lobby.unity",
+                "Assets/Scenes/Scene_PlayerSelection.unity",
+                "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
         {
@@ -359,7 +365,9 @@
             "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity"
+                "Assets/Scenes/Scene_Lobby.unity",
+                "Assets/Scenes/Scene_PlayerSelection.unity",
+                "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
         {
@@ -368,7 +376,9 @@
             "fullManagedTypeName": "UnityEngine.Motion",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity"
+                "Assets/Scenes/Scene_Lobby.unity",
+                "Assets/Scenes/Scene_PlayerSelection.unity",
+                "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
         {
@@ -377,7 +387,9 @@
             "fullManagedTypeName": "UnityEngine.Avatar",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity"
+                "Assets/Scenes/Scene_Lobby.unity",
+                "Assets/Scenes/Scene_PlayerSelection.unity",
+                "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
         {
@@ -386,7 +398,9 @@
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity"
+                "Assets/Scenes/Scene_Lobby.unity",
+                "Assets/Scenes/Scene_PlayerSelection.unity",
+                "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
         {
@@ -662,8 +676,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Scene_Lobby.unity",
-                "Assets/Scenes/Scene_Loading.unity",
-                "Assets/Scenes/Scene_PlayerSelection.unity"
+                "Assets/Scenes/Scene_Loading.unity"
             ]
         },
         {
