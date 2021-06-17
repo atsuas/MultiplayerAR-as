@@ -12,6 +12,7 @@ public class ARPlacementManager : MonoBehaviour
     public Camera aRCamera;
 
     public GameObject battleArenaGameobject;
+    
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class ARPlacementManager : MonoBehaviour
             Vector3 positionToBePlaced = hitPose.position;
 
             battleArenaGameobject.transform.position = positionToBePlaced;
+
         }
     }
 }
