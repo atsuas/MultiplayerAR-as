@@ -88,11 +88,11 @@ public class BattleScript : MonoBehaviourPun
             float mySpeed = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
             float otherPlayerSpeed = collision.collider.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
 
-            Debug.Log("My speed:" + mySpeed + ".....other player speed:" + otherPlayerSpeed);
+            Debug.Log("スピード:" + mySpeed + ".....他のプレイヤーのスピード:" + otherPlayerSpeed);
 
             if (mySpeed > otherPlayerSpeed)
             {
-                Debug.Log(" YOU DAMAGE the other player. ");
+                Debug.Log(" 相手のプレイヤーにダメージを与える ");
                 float default_Damage_Amount = gameObject.GetComponent<Rigidbody>().velocity.magnitude * 3600f * common_Damage_Coefficient;
 
                 if (isAttaker)

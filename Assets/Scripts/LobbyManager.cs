@@ -49,7 +49,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         if (showConnectionStatus)
         {
-            connectionStatusText.text = "Connection Status: " + PhotonNetwork.NetworkClientState;
+            connectionStatusText.text = "接続状況: " + PhotonNetwork.NetworkClientState;
         }
         
     }
@@ -81,7 +81,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.Log("Player name is invalid or enpty!");
+            Debug.Log("プレイヤーの名前が無効、または空になっています");
         }
     }
 
@@ -97,12 +97,12 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     #region PHOTON Callback Method
     public override void OnConnected()
     {
-        Debug.Log("We connected to Internet");
+        Debug.Log("インターネットに接続しました");
     }
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log(PhotonNetwork.LocalPlayer.NickName + " is connected to Photon Server");
+        Debug.Log(PhotonNetwork.LocalPlayer.NickName + " がPhotonサーバーに接続中");
 
         uI_LobbyGameobject.SetActive(true);
         uI_3DGameobject.SetActive(true);

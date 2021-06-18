@@ -78,7 +78,7 @@ public class SpawnManager : MonoBehaviourPunCallbacks
         object playerSelectionNumber;
         if (PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(MultiplayerARSpinnerTopGame.PLAYER_SELECTION_NUMBER, out playerSelectionNumber))
         {
-            Debug.Log("player selection number is " + (int)playerSelectionNumber);
+            Debug.Log("プレーヤー選択番号は " + (int)playerSelectionNumber);
 
             int randomSpawnPoint = Random.Range(0, spawnPositions.Length - 1);
             Vector3 instantiatePosition = spawnPositions[randomSpawnPoint].position;
@@ -113,7 +113,7 @@ public class SpawnManager : MonoBehaviourPunCallbacks
             }
             else
             {
-                Debug.Log("Failed to allocate a viewID");
+                Debug.Log("viewIDの割り当てに失敗しました。");
                 Destroy(playerGameobject);
             }
         }
