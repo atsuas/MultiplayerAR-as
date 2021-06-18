@@ -152,10 +152,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSwitcherTransform: {fileID: 1158278241}
   spinnerTopModels:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1706969716509002}
+  - {fileID: 1241871199743146}
+  - {fileID: 1752566401802544}
+  - {fileID: 1208241101985208}
   playerSelectionNumber: 0
   playerModelType_Text: {fileID: 2010573073}
   next_Button: {fileID: 1289593102}
@@ -10854,7 +10854,7 @@ Animator:
   m_GameObject: {fileID: 1241871199743146}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 62ae09d2ccdae4c4eaeed456dff4f36c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 818cb8ef416a4c64880649512e61d046, type: 2}
+  m_Controller: {fileID: 9100000, guid: 44b68b2df52d24e2fb213221ac0505a4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -10873,7 +10873,7 @@ Animator:
   m_GameObject: {fileID: 1208241101985208}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 42a1a492d8beb5d41a015b907d3b16f6, type: 3}
-  m_Controller: {fileID: 9100000, guid: 29119b3053fbd4344b78d4029cd25236, type: 2}
+  m_Controller: {fileID: 9100000, guid: 936553a0ceb6c4fdd9ba0e393a90987a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -10892,7 +10892,7 @@ Animator:
   m_GameObject: {fileID: 1706969716509002}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4169321273f8db2449f0e0b25cb02ac2, type: 3}
-  m_Controller: {fileID: 9100000, guid: 60e9095272277fa4c99e5e634cbea65b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 77a540d2f617c4797915ba65c30ab0ff, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -10911,7 +10911,7 @@ Animator:
   m_GameObject: {fileID: 1752566401802544}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e3d9f1595599ccc4faee1c8e8ed0e04d, type: 3}
-  m_Controller: {fileID: 9100000, guid: a1d47aeea5b28174bb2d7a149139aa51, type: 2}
+  m_Controller: {fileID: 9100000, guid: 711a17f5fb3844d35bd489f2655470af, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
