@@ -56,12 +56,12 @@ public class PlayerSelectionManager : MonoBehaviour
         if (playerSelectionNumber == 0 || playerSelectionNumber == 1)
         {
             //これは、Attackのプレイヤーモデルタイプを意味してる
-            playerModelType_Text.text = "Attack";
+            playerModelType_Text.text = "ストライカー";
         }
         else
         {
             //これは、Defendのプレイヤーモデルタイプを意味してる
-            playerModelType_Text.text = "Defend";
+            playerModelType_Text.text = "ディフェンダー";
         }
     }
 
@@ -82,12 +82,12 @@ public class PlayerSelectionManager : MonoBehaviour
         if (playerSelectionNumber == 0 || playerSelectionNumber == 1)
         {
             //これは、Attackのプレイヤーモデルタイプを意味してる
-            playerModelType_Text.text = "Attack";
+            playerModelType_Text.text = "ストライカー";
         }
         else
         {
             //これは、Defendのプレイヤーモデルタイプを意味してる
-            playerModelType_Text.text = "Defend";
+            playerModelType_Text.text = "ディフェンダー";
         }
     }
 

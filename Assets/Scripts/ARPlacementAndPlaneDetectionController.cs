@@ -30,7 +30,7 @@ public class ARPlacementAndPlaneDetectionController : MonoBehaviour
         adjustButton.SetActive(false);
         searchForGameButton.SetActive(false);
 
-        informUIPanel_Text.text = "Move phone to detect planes and place the Battle Arena!";
+        informUIPanel_Text.text = "スマホを動かして平面を検知し、\nバトル洗面台を配置しよう!";
     }
 
     void Update()
@@ -49,7 +49,7 @@ public class ARPlacementAndPlaneDetectionController : MonoBehaviour
         adjustButton.SetActive(true);
         searchForGameButton.SetActive(true);
 
-        informUIPanel_Text.text = "Greate! You place Arena..Now, Search for games to Battle!";
+        informUIPanel_Text.text = "いいですね!　さあ、\nバトルするルームを探しましょう!";
     }
 
     public void EnableARPlacementAndPlaneDetection()
@@ -63,7 +63,7 @@ public class ARPlacementAndPlaneDetectionController : MonoBehaviour
         adjustButton.SetActive(false);
         searchForGameButton.SetActive(false);
 
-        informUIPanel_Text.text = "Move phone to detect planes and place the Battle Arena!";
+        informUIPanel_Text.text = "スマホを動かして平面を検知し、\nバトル洗面台を配置しよう!";
     }
 
     private void SetAllPlanesActiveOrDeactive(bool value)

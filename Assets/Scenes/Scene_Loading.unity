@@ -260,10 +260,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Loading...
+  m_text: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dac26dc60cc21c248b15a0d377e0dc4c, type: 2}
-  m_sharedMaterial: {fileID: -3996687209750109849, guid: dac26dc60cc21c248b15a0d377e0dc4c,
+  m_fontAsset: {fileID: 11400000, guid: a1ae3999a5b544d42b916c0fcd899789, type: 2}
+  m_sharedMaterial: {fileID: 7595071589631985891, guid: a1ae3999a5b544d42b916c0fcd899789,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

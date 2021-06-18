@@ -23,7 +23,7 @@ public class SpinningTopsGameManager : MonoBehaviourPunCallbacks
     #region UI Callback Method
     public void JoinRandomRoom()
     {
-        uI_InformText.text = "Searching for available rooms...";
+        uI_InformText.text = "ルームを検索しています...";
 
         PhotonNetwork.JoinRandomRoom();
 
@@ -60,22 +60,22 @@ public class SpinningTopsGameManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
-            uI_InformText.text = " Joined to " + PhotonNetwork.CurrentRoom.Name + " waiting for other players..."; 
+            uI_InformText.text = " 　参加しました! " + PhotonNetwork.CurrentRoom.Name + " \n他のプレイヤーを待っています...";
         }
         else
         {
-            uI_InformText.text = " Joined to " + PhotonNetwork.CurrentRoom.Name;
+            uI_InformText.text = " 参加しました! " + PhotonNetwork.CurrentRoom.Name;
             StartCoroutine(DeactivateAfterSeconds(uI_InformmPanelGameobject, 2.0f));
         }
 
-        Debug.Log(" joined to " + PhotonNetwork.CurrentRoom.Name);
+        Debug.Log(" 参加しました! " + PhotonNetwork.CurrentRoom.Name);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log(newPlayer.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name + " Player count " + PhotonNetwork.CurrentRoom.PlayerCount);
+        Debug.Log(newPlayer.NickName + " 参加しました! " + PhotonNetwork.CurrentRoom.Name + " プレイヤー数: " + PhotonNetwork.CurrentRoom.PlayerCount);
 
-        uI_InformText.text = newPlayer.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name + " Player count " + PhotonNetwork.CurrentRoom.PlayerCount;
+        uI_InformText.text = newPlayer.NickName + " 参加しました! " + PhotonNetwork.CurrentRoom.Name + " プレイヤー数: " + PhotonNetwork.CurrentRoom.PlayerCount;
 
         StartCoroutine(DeactivateAfterSeconds(uI_InformmPanelGameobject, 2.0f));
     }
@@ -90,7 +90,7 @@ public class SpinningTopsGameManager : MonoBehaviourPunCallbacks
     #region PRIVATE Methods
     void CreateAndJoinRoom()
     {
-        string randomRoomName = "Room" + Random.Range(0, 1000);
+        string randomRoomName = "ルーム:" + Random.Range(0, 1000);
 
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2;
