@@ -246,9 +246,7 @@
             "fullManagedTypeName": "UnityEngine.TrailRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity",
-                "Assets/Scenes/Scene_PlayerSelection.unity",
-                "Assets/Scenes/Scene_Gameplay.unity"
+                "Assets/Scenes/Scene_Lobby.unity"
             ]
         },
         {
@@ -310,7 +308,6 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Scene_Lobby.unity",
-                "Assets/Scenes/Scene_PlayerSelection.unity",
                 "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
@@ -577,7 +574,6 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Scene_Lobby.unity",
-                "Assets/Scenes/Scene_PlayerSelection.unity",
                 "Assets/Scenes/Scene_Gameplay.unity"
             ]
         },
@@ -744,8 +740,7 @@
             "fullManagedTypeName": "UnityEngine.SpriteRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Scene_Lobby.unity",
-                "Assets/Scenes/Scene_PlayerSelection.unity"
+                "Assets/Scenes/Scene_Lobby.unity"
             ]
         },
         {
