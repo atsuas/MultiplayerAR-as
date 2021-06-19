@@ -163,7 +163,7 @@ public class BattleScript : MonoBehaviourPun
 
         if (photonView.IsMine)
         {
-            //countdown for respawn
+            //リスポーンまでのカウントダウン
             StartCoroutine(ReSpawn());
         }
     }
